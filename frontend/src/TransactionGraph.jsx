@@ -928,21 +928,25 @@ export default function TransactionGraph({
             />
 
 
-            <Controls />
+            <Controls
+              style={{
+                background: "#0f172a",
+                border: "1px solid #334155",
+               borderRadius: "10px",
+              }}
+            />
 
 
             <MiniMap
-              nodeColor={
-                (node) =>
-
-                  node.data
-                    ?.type ===
-                  "suspect"
-
-                    ? "#5c9dff"
-
-                    : "#34445f"
-              }
+              nodeColor="#1e293b"
+              nodeStrokeColor="#60a5fa"
+              nodeBorderRadius={6}
+              maskColor="rgba(2, 6, 23, 0.75)"
+              style={{
+                background: "#0f172a",
+                border: "1px solid #334155",
+                borderRadius: "10px",
+             }}
             />
 
           </ReactFlow>
