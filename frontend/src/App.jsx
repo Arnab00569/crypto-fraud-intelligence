@@ -19,21 +19,23 @@ function App() {
     setError("");
     setResult(null);
 
-    try {
-      const response = await fetch(
-        "http://127.0.0.1:8000/analyze",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            wallet_address: wallet.trim(),
-            blockchain: "ethereum",
-            max_transactions: 50,
-          }),
-        }
-      );
+    const API_URL = import.meta.env.VITE_API_URL;
+
+  try {
+    const response = await fetch(
+      `${API_URL}/analyze`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          wallet_address: wallet.trim(),
+          blockchain: "ethereum",
+          max_transactions: 50,
+        }),
+      }
+    );
 
       const data = await response.json();
 
