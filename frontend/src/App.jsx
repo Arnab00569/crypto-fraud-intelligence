@@ -130,7 +130,7 @@ function App() {
           </div>
 
           <div>
-            <h1>CryptoGuard</h1>
+            <h1>Block Sphare</h1>
             <p>Blockchain Fraud Intelligence</p>
           </div>
 
